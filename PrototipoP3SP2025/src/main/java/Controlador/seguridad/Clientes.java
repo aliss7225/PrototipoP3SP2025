@@ -45,7 +45,7 @@ public class Clientes {
         return nit_clientes;
     }
 
-    public void setNit_clientes(String estatus_clientes) {
+    public void setNit_clientes(String nit_clientes) {
         this.nit_clientes = nit_clientes;
     }
 

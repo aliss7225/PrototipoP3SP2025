@@ -1,5 +1,4 @@
 Modelo\seguridad\BitacoraDAO.class
-vista\MdiGeneral$8.class
 vista\seguridad\MantenimientoBitacora$4.class
 vista\seguridad\MantenimientoClientes$8.class
 Modelo\seguridad\UsuarioDAO.class
@@ -10,6 +9,7 @@ vista\MdiGeneral$1.class
 vista\MdiGeneral.class
 Controlador\seguridad\Bitacora.class
 vista\seguridad\MantenimientoBitacora.class
+vista\seguridad\MantenimientoClientes$10.class
 vista\seguridad\MantenimientoClientes.class
 vista\MdiGeneral$5.class
 vista\seguridad\MantenimientoClientes$4.class
@@ -20,7 +20,6 @@ vista\seguridad\MantenimientoUsuario$2.class
 Modelo\Conexion.class
 vista\seguridad\MantenimientoBitacora$2.class
 Controlador\seguridad\Utilidades.class
-vista\MdiGeneral$7.class
 vista\seguridad\MantenimientoClientes$2.class
 vista\seguridad\MantenimientoUsuario$5.class
 vista\MdiGeneral$2.class
