@@ -25,7 +25,7 @@ public class MantenimientoClientes extends javax.swing.JInternalFrame {
         DefaultTableModel modelo = new DefaultTableModel();
         modelo.addColumn("ID Perfil");
         modelo.addColumn("Nombre");
-        modelo.addColumn("Estatus");
+        modelo.addColumn("Nit");
         
         ClientesDAO clientesDAO = new ClientesDAO();
         List<Clientes> clientes = clientesDAO.select();
@@ -35,7 +35,7 @@ public class MantenimientoClientes extends javax.swing.JInternalFrame {
         for (int i = 0; i < clientes.size(); i++) {
             dato[0] = clientes.get(i).getCodigo_clientes();
             dato[1] = clientes.get(i).getNombre_clientes();
-            dato[2] = clientes.get(i).getEstatus_clientes();
+            dato[2] = clientes.get(i).getNit_clientes();
             modelo.addRow(dato);
         }
     }
@@ -46,7 +46,7 @@ public class MantenimientoClientes extends javax.swing.JInternalFrame {
         clienteAConsultar.setCodigo_clientes(txtbuscado.getText());
         clienteAConsultar = perfilDAO.query(clienteAConsultar);
         txtNombre.setText(clienteAConsultar.getNombre_clientes());
-        txtEstatus.setText(clienteAConsultar.getEstatus_clientes());
+        txtEstatus.setText(clienteAConsultar.getNit_clientes());
         UsuarioConectado usuarioEnSesion = new UsuarioConectado();
         int resultadoBitacora=0;
         Bitacora bitacoraRegistro = new Bitacora();
@@ -332,7 +332,7 @@ public class MantenimientoClientes extends javax.swing.JInternalFrame {
         Clientes clienteAInsertar = new Clientes();
         clienteAInsertar.setCodigo_clientes(txtidclientes.getText());
         clienteAInsertar.setNombre_clientes(txtNombre.getText());
-        clienteAInsertar.setEstatus_clientes(txtEstatus.getText());
+        clienteAInsertar.setNit_clientes(txtEstatus.getText());
         clientesDAO.insert(clienteAInsertar);
         UsuarioConectado usuarioEnSesion = new UsuarioConectado();
         int resultadoBitacora=0;
@@ -352,7 +352,7 @@ public class MantenimientoClientes extends javax.swing.JInternalFrame {
         Clientes clientesAActualizar = new Clientes();
         clientesAActualizar.setCodigo_clientes(txtbuscado.getText());
         clientesAActualizar.setNombre_clientes(txtNombre.getText());
-        clientesAActualizar.setEstatus_clientes(txtEstatus.getText());
+        clientesAActualizar.setNit_clientes(txtEstatus.getText());
         clientesDAO.update(clientesAActualizar);
         llenadoDeTablas();
         UsuarioConectado usuarioEnSesion = new UsuarioConectado();

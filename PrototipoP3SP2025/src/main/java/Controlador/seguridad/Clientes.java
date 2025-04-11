@@ -12,17 +12,17 @@ public class Clientes {
 
     private String codigo_clientes;
     private String nombre_clientes;
-    private String estatus_clientes;
+    private String nit_clientes;
 
-    public Clientes(String codigo_clientes, String nombre_clientes, String estatus_clientes) {
+    public Clientes(String codigo_clientes, String nombre_clientes, String nit_clientes) {
         this.codigo_clientes = codigo_clientes;
         this.nombre_clientes = nombre_clientes;
-        this.estatus_clientes = estatus_clientes;
+        this.nit_clientes = nit_clientes;
     }
 
     @Override
     public String toString() {
-        return "Clientes{" + "codigo_clientes=" + codigo_clientes + ", nombre_clientes=" + nombre_clientes + ", estatus_clientes=" + estatus_clientes + '}';
+        return "Clientes{" + "codigo_clientes=" + codigo_clientes + ", nombre_clientes=" + nombre_clientes + ", nit_clientes=" + nit_clientes + '}';
     }
 
     public String getCodigo_clientes() {
@@ -41,12 +41,12 @@ public class Clientes {
         this.nombre_clientes = nombre_clientes;
     }
 
-    public String getEstatus_clientes() {
-        return estatus_clientes;
+    public String getNit_clientes() {
+        return nit_clientes;
     }
 
-    public void setEstatus_clientes(String estatus_clientes) {
-        this.estatus_clientes = estatus_clientes;
+    public void setNit_clientes(String estatus_clientes) {
+        this.nit_clientes = nit_clientes;
     }
 
     public Clientes() {

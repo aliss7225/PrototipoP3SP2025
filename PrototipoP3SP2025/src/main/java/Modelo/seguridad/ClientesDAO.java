@@ -20,11 +20,11 @@ import java.util.List;
  */
 public class ClientesDAO {
 
-    private static final String SQL_SELECT = "SELECT codigo_clientes, nombre_clientes, estatus_clientes FROM clientes";
-    private static final String SQL_INSERT = "INSERT INTO clientes(codigo_clientes, nombre_clientes, estatus_clientes) VALUES(?, ?, ?)";
-    private static final String SQL_UPDATE = "UPDATE clientes SET nombre_clientes=?, estatus_clientes=? WHERE codigo_clientes = ?";
+    private static final String SQL_SELECT = "SELECT codigo_clientes, nombre_clientes, nit_clientes FROM clientes";
+    private static final String SQL_INSERT = "INSERT INTO clientes(codigo_clientes, nombre_clientes, nit_clientes) VALUES(?, ?, ?)";
+    private static final String SQL_UPDATE = "UPDATE clientes SET nombre_clientes=?, nit_clientes=? WHERE codigo_clientes = ?";
     private static final String SQL_DELETE = "DELETE FROM clientes WHERE codigo_clientes=?";
-    private static final String SQL_QUERY = "SELECT codigo_clientes, nombre_clientes, estatus_clientes FROM clientes WHERE codigo_clientes = ?";
+    private static final String SQL_QUERY = "SELECT codigo_clientes, nombre_clientes, nit_clientes FROM clientes WHERE codigo_clientes = ?";
 
     public List<Clientes> select() {
         Connection conn = null;
@@ -40,12 +40,12 @@ public class ClientesDAO {
             while (rs.next()) {
                 String codigoCliente = rs.getString("codigo_clientes");
                 String nombreClientes = rs.getString("nombre_clientes");
-                String estatusClientes = rs.getString("estatus_clientes");
+                String nitClientes = rs.getString("nit_clientes");
                 
                 cliente = new Clientes();
                 cliente.setCodigo_clientes(codigoCliente);
                 cliente.setNombre_clientes(nombreClientes);
-                cliente.setEstatus_clientes(estatusClientes);
+                cliente.setNit_clientes(nitClientes);
                 
                 clientes.add(cliente);
             }
@@ -70,7 +70,7 @@ public class ClientesDAO {
             stmt = conn.prepareStatement(SQL_INSERT);
             stmt.setString(1, cliente.getCodigo_clientes());
             stmt.setString(2, cliente.getNombre_clientes());
-            stmt.setString(3, cliente.getEstatus_clientes());
+            stmt.setString(3, cliente.getNit_clientes());
 
             System.out.println("ejecutando query: " + SQL_INSERT);
             rows = stmt.executeUpdate();
@@ -96,7 +96,7 @@ public class ClientesDAO {
             stmt = conn.prepareStatement(SQL_UPDATE);
             
             stmt.setString(1, cliente.getNombre_clientes());
-            stmt.setString(2, cliente.getEstatus_clientes());
+            stmt.setString(2, cliente.getNit_clientes());
             stmt.setString(3, cliente.getCodigo_clientes());
             
             rows = stmt.executeUpdate();
@@ -150,12 +150,12 @@ public class ClientesDAO {
             while (rs.next()) {
                 String codigoCliente = rs.getString("codigo_clientes");
                 String nombreClientes = rs.getString("nombre_clientes");
-                String estatusClientes = rs.getString("estatus_clientes");
+                String nitClientes = rs.getString("nit_clientes");
                 
                 cliente = new Clientes();
                 cliente.setCodigo_clientes(codigoCliente);
                 cliente.setNombre_clientes(nombreClientes);
-                cliente.setEstatus_clientes(estatusClientes);
+                cliente.setNit_clientes(nitClientes);
 
             }
 

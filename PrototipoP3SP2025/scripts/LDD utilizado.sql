@@ -1,5 +1,5 @@
-CREATE SCHEMA IF NOT EXISTS `hoteles` DEFAULT CHARACTER SET utf8 ;
-USE `hoteles` ;
+CREATE SCHEMA IF NOT EXISTS `cine` DEFAULT CHARACTER SET utf8 ;
+USE `cine` ;
 
 CREATE TABLE IF NOT EXISTS habitaciones(
     codigo_habitaciones VARCHAR(10),
@@ -19,7 +19,7 @@ ENGINE = INNODB CHARSET =latin1;
 CREATE TABLE IF NOT EXISTS clientes(
     codigo_clientes VARCHAR(10),
     nombre_clientes VARCHAR(20),
-    estatus_clientes VARCHAR(1),
+    nit_clientes VARCHAR(20),
     PRIMARY KEY (codigo_clientes))
 ENGINE = INNODB CHARACTER SET = LATIN1; 
 
