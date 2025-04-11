@@ -50,11 +50,9 @@ public class MdiGeneral extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         MenuGeneralSeguridad = new javax.swing.JMenu();
         MenuMantenimientos = new javax.swing.JMenu();
-        MantenimientoUsuarios = new javax.swing.JMenuItem();
         MantenimientoClientes = new javax.swing.JMenuItem();
         Bitacora = new javax.swing.JMenu();
         ConsultaBitacora = new javax.swing.JMenuItem();
-        salirSistema = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -75,7 +73,7 @@ public class MdiGeneral extends javax.swing.JFrame {
             .addGap(0, 279, Short.MAX_VALUE)
         );
 
-        MenuGeneralSeguridad.setText("Reservaciones");
+        MenuGeneralSeguridad.setText("Registro Clientes");
 
         MenuMantenimientos.setText("Mantenimientos");
         MenuMantenimientos.addActionListener(new java.awt.event.ActionListener() {
@@ -83,14 +81,6 @@ public class MdiGeneral extends javax.swing.JFrame {
                 MenuMantenimientosActionPerformed(evt);
             }
         });
-
-        MantenimientoUsuarios.setText("Mantenimiento Usuarios");
-        MantenimientoUsuarios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MantenimientoUsuariosActionPerformed(evt);
-            }
-        });
-        MenuMantenimientos.add(MantenimientoUsuarios);
 
         MantenimientoClientes.setText("Mantenimiento Clientes");
         MantenimientoClientes.addActionListener(new java.awt.event.ActionListener() {
@@ -118,14 +108,6 @@ public class MdiGeneral extends javax.swing.JFrame {
         Bitacora.add(ConsultaBitacora);
 
         MenuGeneralSeguridad.add(Bitacora);
-
-        salirSistema.setText("Salir del Sistema");
-        salirSistema.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                salirSistemaActionPerformed(evt);
-            }
-        });
-        MenuGeneralSeguridad.add(salirSistema);
 
         jMenuBar1.add(MenuGeneralSeguridad);
 
@@ -194,32 +176,6 @@ public class MdiGeneral extends javax.swing.JFrame {
        ventana.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
     }//GEN-LAST:event_ConsultaBitacoraActionPerformed
 
-    private void salirSistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirSistemaActionPerformed
-        // TODO add your handling code here:
-                 // Cerrar otros JInternalFrame antes de abrir uno nuevo//MISHEL
-for (javax.swing.JInternalFrame frame : jDesktopPane1.getAllFrames()) {
-    frame.dispose(); // Cierra cada ventana abierta
-}
-//        
-        int valor=JOptionPane.showConfirmDialog(this,"¿Està seguro de cerrar?", "Advertencia", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
-                    if (valor==JOptionPane.YES_OPTION) 
-                    {
-                        JOptionPane.showMessageDialog(null, "Gracias por su visita, hasta pronto", "Gracias", JOptionPane.INFORMATION_MESSAGE);
-                        System.exit(0);
-                    }
-    }//GEN-LAST:event_salirSistemaActionPerformed
-
-    private void MantenimientoUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MantenimientoUsuariosActionPerformed
-        for (javax.swing.JInternalFrame frame : jDesktopPane1.getAllFrames()) {
-    frame.dispose(); // Cierra cada ventana abierta
-    }
-        MantenimientoUsuario ventana = new MantenimientoUsuario();
-        jDesktopPane1.add(ventana);
-        Dimension desktopSize = jDesktopPane1.getSize();
-        Dimension FrameSize = ventana.getSize();
-        ventana.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
-    }//GEN-LAST:event_MantenimientoUsuariosActionPerformed
-
     private void MantenimientoClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MantenimientoClientesActionPerformed
         for (javax.swing.JInternalFrame frame : jDesktopPane1.getAllFrames()) {
     frame.dispose(); // Cierra cada ventana abierta
@@ -270,7 +226,6 @@ for (javax.swing.JInternalFrame frame : jDesktopPane1.getAllFrames()) {
     private javax.swing.JMenu Bitacora;
     private javax.swing.JMenuItem ConsultaBitacora;
     private javax.swing.JMenuItem MantenimientoClientes;
-    private javax.swing.JMenuItem MantenimientoUsuarios;
     private javax.swing.JMenu MenuGeneralSeguridad;
     private javax.swing.JMenu MenuMantenimientos;
     private javax.swing.JDesktopPane jDesktopPane1;
@@ -278,6 +233,5 @@ for (javax.swing.JInternalFrame frame : jDesktopPane1.getAllFrames()) {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem salirSistema;
     // End of variables declaration//GEN-END:variables
 }

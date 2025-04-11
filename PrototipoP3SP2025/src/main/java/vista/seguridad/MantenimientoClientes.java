@@ -56,7 +56,7 @@ public class MantenimientoClientes extends javax.swing.JInternalFrame {
     public MantenimientoClientes() {
         initComponents();
         llenadoDeTablas();
-        //se quito el llena combos al no contar con empleados
+        
     }
 
     /**
@@ -98,7 +98,7 @@ public class MantenimientoClientes extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
-        setTitle("Mantenimiento Sede");
+        setTitle("Mantenimiento Clientes");
         setVisible(true);
 
         btnEliminar.setText("Eliminar");
@@ -191,6 +191,11 @@ public class MantenimientoClientes extends javax.swing.JInternalFrame {
 
         txtEstatus.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         txtEstatus.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(204, 204, 204)));
+        txtEstatus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEstatusActionPerformed(evt);
+            }
+        });
 
         label5.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
         label5.setText("ID Clientes");
@@ -399,6 +404,10 @@ public class MantenimientoClientes extends javax.swing.JInternalFrame {
     private void txtidclientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtidclientesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtidclientesActionPerformed
+
+    private void txtEstatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEstatusActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEstatusActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

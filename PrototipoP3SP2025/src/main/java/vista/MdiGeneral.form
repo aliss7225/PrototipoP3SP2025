@@ -21,7 +21,7 @@
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="MenuGeneralSeguridad">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Reservaciones"/>
+            <Property name="text" type="java.lang.String" value="Registro Clientes"/>
           </Properties>
           <SubComponents>
             <Menu class="javax.swing.JMenu" name="MenuMantenimientos">
@@ -32,14 +32,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MenuMantenimientosActionPerformed"/>
               </Events>
               <SubComponents>
-                <MenuItem class="javax.swing.JMenuItem" name="MantenimientoUsuarios">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Mantenimiento Usuarios"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MantenimientoUsuariosActionPerformed"/>
-                  </Events>
-                </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="MantenimientoClientes">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Mantenimiento Clientes"/>
@@ -68,14 +60,6 @@
                 </MenuItem>
               </SubComponents>
             </Menu>
-            <MenuItem class="javax.swing.JMenuItem" name="salirSistema">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Salir del Sistema"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="salirSistemaActionPerformed"/>
-              </Events>
-            </MenuItem>
           </SubComponents>
         </Menu>
       </SubComponents>
